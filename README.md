@@ -16,7 +16,7 @@
 ## How to cofigure it?
 
 - SET USER&PASS -> open file `./config/user.json`, and put in your UserName & Password, and save it.
-- SET MAX RAM -> open files `./step0.cmd` & `./step1.cmd`, and change the default value of `16384` (16GB RAM) to another good one for your hardware, suggests no less than 4GB, or 50% of your RAM power.
+- SET MAX RAM -> open files `./step0.cmd` & `./step1.cmd`, and change the default value of `6144` (6GB RAM) to another good one for your hardware, suggests no less than 3GB, or 50% of your RAM power.
 
 ## How to usage it?
 
