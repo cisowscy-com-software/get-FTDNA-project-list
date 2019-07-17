@@ -25,6 +25,8 @@
     - Double-click on `./step0.cmd` and when it's finish and the window disappears by itself. Double-click on `./step1.cmd`
 
     The first command retrieves the pagination of the alphabetical index, the second one for everyone a single element, retrieves and checks all the links needed to retrieve the content. The first process will last up to a minute, the second, even a few hours. Depends on computer performance, internet speed, and simultaneous different PC load.
+    The average speed of the script `./step1.cmd` in my case is 1432 projects per hour.
+    
 2) reconstruction of the result of info of project, (filtering, sorting, splitting)
      -  coming soon..
 3) For get distribution of haplogroups Y-DNA, by map.
