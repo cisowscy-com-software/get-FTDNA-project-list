@@ -4,7 +4,7 @@ class Address {
     constructor(src) {
         this.src = src;
     }
-    toOustOfTab() {
+    toOustOfJSON() {
         try {
             if (fs.existsSync(this.src)) {
                 fs.unlinkSync(this.src);
@@ -13,7 +13,20 @@ class Address {
             console.error(err);
         }
     }
-    toZeroOfTab() {
+    toOustOfEvry() {
+        try { var files = fs.readdirSync(this.src); }
+      catch(e) { return; }
+      if (files.length > 0)
+        for (var i = 0; i < files.length; i++) {
+          var filePath = this.src + '/' + files[i];
+          if (fs.statSync(filePath).isFile())
+            fs.unlinkSync(filePath);
+          else
+            rmDir(filePath);
+        }
+      fs.rmdirSync(this.src);
+    }
+    toZeroOfJSON() {
         try {
             if (!fs.existsSync(this.src)) {
                 try {
@@ -35,9 +48,9 @@ class Address {
             console.error(err);
         }
     }
-    toReadOfTab() {
+    toReadOfJSON() {
         try {
-            if (fs.existsSync(this.src)) {
+            if (fs.existsSync(this.src) && fs.readFileSync(this.src, 'utf8')!="undefined") {
                 return JSON.parse(fs.readFileSync(this.src, 'utf8'));
             } else {
                 console.log("file is not exist");
@@ -48,7 +61,7 @@ class Address {
             return false;
         }
     }
-    toSaveOfTab(data) {
+    toSaveOfJSON(data) {
         try {
             if (path.dirname(this.src) != "." && path.dirname(this.src) != "/" && !fs.existsSync(path.dirname(this.src))) {
                 fs.mkdirSync(path.dirname(this.src), {
@@ -74,7 +87,16 @@ class Address {
     }
     isItemInTab() {
         try {
-            return (fs.existsSync(this.src) && JSON.parse(fs.readFileSync(this.src, 'utf8')).length > 0);
+            return (fs.existsSync(this.src) && fs.readFileSync(this.src, 'utf8')!="undefined" && JSON.parse(fs.readFileSync(this.src, 'utf8')).length > 0);
+        } catch (err) {
+            console.error(err);
+            return false;
+        }
+    }
+    
+    isItemInTabInTab() {
+        try {
+            return (fs.existsSync(this.src) && fs.readFileSync(this.src, 'utf8')!="undefined" && JSON.parse(fs.readFileSync(this.src, 'utf8'))[0].length > 0);
         } catch (err) {
             console.error(err);
             return false;
