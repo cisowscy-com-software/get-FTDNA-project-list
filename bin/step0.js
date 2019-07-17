@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs-extra');
-const path = require('path');
 const C = fs.readJsonSync("./config/user.json");
 const curentDir = (function () {
     const rootDir = "./.temp/";
