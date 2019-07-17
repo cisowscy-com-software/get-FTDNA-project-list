@@ -1,5 +1,5 @@
 ## How to instal it?
-1) First download and install [Node.js >10](https://nodejs.org/en/) 
+1) First download and install [Node.js >10](https://nodejs.org/en/) & [and optionally PowerShell-Core](https://docs.microsoft.com/pl-pl/powershell/scripting/install/installing-powershell?view=powershell-6)
 2) Create a folder anywhere on your computer and run the consoles there.and write the following lines in it, each time confirming them with an enterem
     -    ```PowerShell
          git clone https://github.com/cisowscy-com-software/haplo-ft-get.git
