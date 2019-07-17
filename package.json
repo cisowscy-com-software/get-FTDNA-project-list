@@ -1,7 +1,14 @@
 {
-  "name": "ftdna-list-project",
-  "version": "1.0.0-alpha.1",
+  "name": "get-ftdna-projects",
+  "version": "2.0.0-alpha.1",
+  "scripts": {
+    "getData:step0": "node ./bin/step0.js --max-old-space-size=16384",    
+    "getData:step1": "node ./bin/step1.js --max-old-space-size=16384"
+  },
+  "keywords": ["ftdna", "dna", "haplogroups", "map", "json"],
   "dependencies": {
+    "fs-extra": "^8.1.0",
+    "puppeteer": "^1.18.1",
     "crawler": "^1.2.1"
   }
 }
