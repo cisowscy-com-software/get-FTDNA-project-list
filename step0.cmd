@@ -1,1 +1,0 @@
-node ./bin/step0.js --max-old-space-size=6144
